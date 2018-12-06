@@ -1,13 +1,13 @@
 # Collections
 
-- [Introduction](#introduction)
-- [Creating Collections](#creating-collections)
-- [Available Methods](#available-methods)
+- [Introdução](#introduction)
+- [Criando Coleções](#creating-collections)
+- [Metodos Disponíveis](#available-methods)
 
 <a name="introduction"></a>
-## Introduction
+## Introdução
 
-The `Illuminate\Support\Collection` class provides a fluent, convenient wrapper for working with arrays of data. For example, check out the following code. We'll use the `collect` helper to create a new collection instance from the array, run the `strtoupper` function on each element, and then remove all empty elements:
+A classe `Illuminate\Support\Collection` fornece um pacote fluente e conveniente para trabalhar com matrizes de dados. Por exemplo, olhe o código a seguir. Nós iremos usar o `collect` helper para criar uma nova instância de coleção da matriz, execute a função `strtoupper` em cada elemento, então remova todos os elementos vazios:
 
     $collection = collect(['taylor', 'abigail', null])->map(function ($name) {
         return strtoupper($name);
@@ -17,16 +17,16 @@ The `Illuminate\Support\Collection` class provides a fluent, convenient wrapper 
     });
 
 
-As you can see, the `Collection` class allows you to chain its methods to perform fluent mapping and reducing of the underlying array. In general, every `Collection` method returns an entirely new `Collection` instance.
+Como você pode ver que a classe `Collection` permite encadear seus métodos, executar mapeamento e reduções fluentes do array subjacente. em general, todo metodo  `Collection` devolve uma instância inteiramente nova de  `Collection`.
 
 <a name="creating-collections"></a>
-## Creating Collections
+## Criando Coleções
 
-As mentioned above, the `collect` helper returns a new `Illuminate\Support\Collection` instance for the given array. So, creating a collection is as simple as:
+Como mencionamos acima, o `collect` helper retorna uma nova instância `Illuminate\Support\Collection` para o array fornecido. Então, criar uma collection é bem simples:
 
     $collection = collect([1, 2, 3]);
 
-By default, collections of [Eloquent](/docs/{{version}}/eloquent) models are always returned as `Collection` instances; however, feel free to use the `Collection` class wherever it is convenient for your application.
+Por padrão, collections de modelos [Eloquent](/docs/{{version}}/eloquent)  são sempre retornados como instâncias`Collection` entretanto, sinta-se livre para usar a classe`Collection` onde for conveniente para sua aplicação.
 
 <a name="available-methods"></a>
 ## Available Methods
